@@ -1,1 +1,6 @@
 # PdSProject
+
+Questo software è stato sviluppato da Daniele Pellone e Jessica Fenudi per l'esame di Programmazione di Sistema al Politecnico di Torino.
+
+Lo scopo del software è quello di visualizzare le applicazioni aperte sui computer su cui viene eseguito il server attraverso un client.
+Viene deta inoltre la possibilità di inviare comandi alle applicazioni che sono in foreground.
