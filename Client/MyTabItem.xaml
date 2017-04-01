@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Client.MyTabItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Client"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <ListView x:Name="listView" Margin="10,10,10,4.009" Grid.Row="1" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" IsSynchronizedWithCurrentItem="True">
+        <ListView.ItemContainerStyle>
+            <Style TargetType="ListViewItem">
+                <Setter Property="IsHitTestVisible" Value="False"/>
+                <Style.Triggers>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Property="IsSelected" Value="True" />
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter Property="Background" Value="LightCyan" />
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+                </Style.Triggers>
+            </Style>
+        </ListView.ItemContainerStyle>
+        <ListView.View>
+            <GridView AllowsColumnReorder="False">
+                <GridViewColumn Header="Icona">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Icon}" Width="48" Height="48"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Name}"/>
+                <GridViewColumn Header="Tempo di focus" DisplayMemberBinding="{Binding Percentage, StringFormat=\{0\}%}"/>
+                <GridViewColumn Header="Stato" DisplayMemberBinding="{Binding Stato}" Width="100"/>
+            </GridView>
+        </ListView.View>
+    </ListView>
+</UserControl>

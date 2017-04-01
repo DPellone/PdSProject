@@ -1,0 +1,29 @@
+﻿<Window x:Class="Client.Intro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Connessione" Height="200" Width="282" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" SnapsToDevicePixels="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="53*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="PortTextBox" HorizontalAlignment="Left" Height="22" Margin="56,10.667,0,0" Grid.Row="2" TextWrapping="Wrap" Text="2000" VerticalAlignment="Top" Width="46" TabIndex="4" ToolTip="Porta del server (1 - 65535)" MaxLength="5" PreviewTextInput="IsNumberAllowed" GotFocus="SelectAll" HorizontalContentAlignment="Center" CommandManager.PreviewExecuted="DisablePasteTextbox" ContextMenu="{x:Null}" LostFocus="DefaultValueOnLostFocus"/>
+        <TextBlock x:Name="Text" HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="16" Width="250"><Run Text="Inserire indirizzo e porta del server remoto"/></TextBlock>
+        <Label x:Name="IpLabel" Content="Indirizzo IP:" HorizontalAlignment="Left" Margin="10,6.667,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="PortLabel" Content="Porta:" HorizontalAlignment="Left" Margin="10,10.667,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Button x:Name="ConnectionButton" Content="Connetti" HorizontalAlignment="Right" Margin="0,9.667,9.667,0" Grid.Row="3" VerticalAlignment="Top" Width="76" Click="ConnectionClick" Grid.Column="1" IsDefault="True"/>
+        <TextBox x:Name="IPTextBox1" Margin="85,9.667,0,5.333" Grid.Row="1" TextWrapping="Wrap" Text="127" HorizontalAlignment="Left" Width="32" TabIndex="0" PreviewTextInput="IsNumberAllowed" MaxLength="3" GotFocus="SelectAll" HorizontalContentAlignment="Center" CommandManager.PreviewExecuted="DisablePasteTextbox" ContextMenu="{x:Null}" LostFocus="DefaultValueOnLostFocus"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="122,12.667,0,9.333" Grid.Row="1" TextWrapping="Wrap" Text="."/>
+        <TextBox x:Name="IPTextBox2" Margin="129,9.667,0,5.333" Grid.Row="1" TextWrapping="Wrap" Text="0" HorizontalAlignment="Left" Width="32" TabIndex="1" MaxLength="3" PreviewTextInput="IsNumberAllowed" GotFocus="SelectAll" HorizontalContentAlignment="Center" CommandManager.PreviewExecuted="DisablePasteTextbox" ContextMenu="{x:Null}" LostFocus="DefaultValueOnLostFocus"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="167,11.667,0,9.333" Grid.Row="1" TextWrapping="Wrap" Text="."/>
+        <TextBox x:Name="IPTextBox3" Margin="173,9.667,0,4.333" Grid.Row="1" TextWrapping="Wrap" Text="0" HorizontalAlignment="Left" Width="32" TabIndex="2" MaxLength="3" PreviewTextInput="IsNumberAllowed" GotFocus="SelectAll" HorizontalContentAlignment="Center" CommandManager.PreviewExecuted="DisablePasteTextbox" ContextMenu="{x:Null}" LostFocus="DefaultValueOnLostFocus"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="209,11.667,0,10.333" Grid.Row="1" TextWrapping="Wrap" Text="."/>
+        <TextBox x:Name="IPTextBox4" Margin="216,9.667,0,5.333" Grid.Row="1" TextWrapping="Wrap" Text="1" TabIndex="3" MaxLength="3" PreviewTextInput="IsNumberAllowed" HorizontalAlignment="Left" Width="32" GotFocus="SelectAll" HorizontalContentAlignment="Center" CommandManager.PreviewExecuted="DisablePasteTextbox" ContextMenu="{x:Null}" LostFocus="DefaultValueOnLostFocus"/>
+    </Grid>
+</Window>
